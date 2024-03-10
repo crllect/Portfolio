@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap");
+:root {
+  --priBgCol: #080609;
+  --secBgCol: #21182380;
+  --BACol1: #B071FF;
+  --BACol2: #a649c5;
+  --uniMargin: 2vw;
+  --navBarHeight: 5rem;
+  --navBarRad: 20px;
+  --navBarFontSize: 30px;
+  --priTextCol: #fff;
+  --secTextCol: rgba(255, 255, 255, 0.50);
+}
+
+.BAContainer {
+  position: fixed;
+  right: calc(var(--uniMargin) * 6);
+  top: calc(var(--navBarHeight) * 2);
+}
+@keyframes colorChange {
+  0%, 100% {
+    fill: var(--BACol1);
+  }
+  50% {
+    fill: var(--BACol2);
+  }
+}
+.BAContainer path {
+  animation: colorChange 8s infinite linear;
+}
+
+.BASvg {
+  animation: blurChange 12s infinite linear;
+}
+@keyframes blurChange {
+  0%, 100% {
+    filter: blur(9vh);
+  }
+  50% {
+    filter: blur(10vw);
+  }
+}
+
+.navBar {
+  position: fixed;
+  width: 100vw;
+  height: var(--navBarHeight);
+  fill: rgba(35, 24, 34, 0.5);
+  filter: drop-shadow(0px 10px 5px rgba(213, 143, 224, 0.2));
+  backdrop-filter: blur(15px);
+  background-color: var(--secBgCol);
+  border-radius: 0 0 var(--navBarRad) var(--navBarRad);
+  z-index: 1000;
+}
+
+.navLinksContainer {
+  margin-top: calc(var(--navBarHeight) / 2 - var(--navBarFontSize) * 0.75) !important;
+  font-size: var(--navBarFontSize);
+  font-family: Cabin;
+  font-style: normal;
+  line-height: normal;
+}
+
+.navLink {
+  transition: all 0.5s ease;
+  margin: var(--uniMargin);
+  font-weight: 400;
+  color: var(--secTextCol);
+}
+.navLink:hover {
+  color: var(--priTextCol);
+  text-shadow: var(--priTextCol) 0 0 5px;
+}
+
+.selected {
+  transition: all 0.5s ease;
+  margin: var(--uniMargin);
+  font-weight: 700;
+  color: var(--priTextCol);
+  text-shadow: var(--secTextCol) 0 0 20px;
+}
+.selected:hover {
+  color: var(--priTextCol);
+  text-shadow: var(--priTextCol) 0 0 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.introContainer {
+  position: absolute;
+  top: calc(var(--navBarHeight) * 3);
+  left: calc(var(--uniMargin) * 2);
+  font-size: 25px;
+  z-index: 500;
+}
+
+.whoami {
+  font-size: 70px;
+}
+
+.funFact {
+  color: var(--secTextCol);
+  margin-bottom: 10px;
+}
+
+.bio {
+  font-size: 30px;
+}
+
+strong {
+  color: #fff;
+}
+
+body {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  background: var(--priBgCol);
+  font-family: Cabin;
+  font-style: normal;
+  line-height: normal;
+  color: #fff;
+}/*# sourceMappingURL=globals.css.map */

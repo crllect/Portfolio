@@ -1,0 +1,24 @@
+.introContainer {
+    position: absolute;
+    top: calc(var(--navBarHeight) * 3);
+    left: calc(var(--uniMargin) * 2);
+    font-size: 25px;
+    z-index: 500;
+}
+
+.whoami {
+    font-size: 70px;
+}
+
+.funFact {
+    color: var(--secTextCol);
+    margin-bottom: 10px;
+}
+
+.bio {
+    font-size: 30px
+}
+
+strong {
+    color: #fff;
+}

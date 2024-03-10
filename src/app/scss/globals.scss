@@ -1,0 +1,18 @@
+@import "_variables.scss";
+@import "landing/_breathingAnim.scss";
+@import "landing/_navBar.scss";
+@import "landing/_introText.scss";
+@import "_scrollBar.scss";
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+body {
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    background: var(--priBgCol);
+    font-family: Cabin;
+    font-style: normal;
+    line-height: normal;
+    color: #fff;
+}

@@ -1,0 +1,31 @@
+.BAContainer {
+    position: fixed;
+    right: calc(var(--uniMargin) * 6);
+    top: calc(var(--navBarHeight) * 2);
+    @keyframes colorChange {
+        0%,
+        100% {
+            fill: var(--BACol1);
+        }
+        50% {
+            fill: var(--BACol2);
+        }
+    }
+    path {
+        animation: colorChange 8s infinite linear;
+    }
+}
+
+.BASvg {
+    @keyframes blurChange {
+        0%,
+        100% {
+            filter: blur(9vh);
+        }
+        50% {
+            filter: blur(10vw);
+        }
+    }
+
+    animation: blurChange 12s infinite linear;
+}

@@ -1,0 +1,48 @@
+.navBar {
+    position: fixed;
+    width: 100vw;
+    height: var(--navBarHeight);
+    fill: rgba(35, 24, 34, 0.5);
+    filter: drop-shadow(0px 10px 5px rgba(213, 143, 224, 0.2));
+    backdrop-filter: blur(15px);
+    background-color: var(--secBgCol);
+    border-radius: 0 0 var(--navBarRad) var(--navBarRad);
+    z-index: 1000;
+}
+
+.navLinksContainer {
+    margin-top: calc(
+        (var(--navBarHeight) / 2) - var(--navBarFontSize) * 0.75
+    ) !important;
+    font-size: var(--navBarFontSize);
+    font-family: Cabin;
+    font-style: normal;
+    line-height: normal;
+}
+
+.navLink {
+    transition: all 0.5s ease;
+    margin: var(--uniMargin);
+    font-weight: 400;
+    color: var(--secTextCol);
+    &:hover {
+        color: var(--priTextCol);
+        text-shadow: var(--priTextCol) 0 0 5px;
+    }
+}
+
+.selected {
+    transition: all 0.5s ease;
+    margin: var(--uniMargin);
+    font-weight: 700;
+    color: var(--priTextCol);
+    text-shadow: var(--secTextCol) 0 0 20px;
+    &:hover {
+        color: var(--priTextCol);
+        text-shadow: var(--priTextCol) 0 0 5px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
